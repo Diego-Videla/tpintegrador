@@ -42,15 +42,6 @@ header {
     color: black;
     font-weight: 600;
 }
-/*.carrito {
-    height: 40px;
-    padding: 5px 10px;
-    margin-right: 1rem;
-    cursor: pointer;
-}
-#cart-toggle{
-    display: none;   
-}*/
 
 #menu-toggle,
 .menu-label {
