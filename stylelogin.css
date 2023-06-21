@@ -9,6 +9,22 @@
 body{
     background: linear-gradient(90deg, rgba(12,10,166,1) 0%, rgba(79,112,201,1) 35%, rgba(0,212,255,1) 100%);
 }
+
+header {
+    background-color: #e5e5e5;
+    width: 100%;
+    display: flex;
+    padding: 0 30px;
+    justify-content:center;
+    align-items: center;
+    height: 65px;
+}
+header h1{
+    font-size: 40px;
+}
+.logo {
+    height: 85px;
+}
 main{
     display: flex;
     flex-direction: column;
@@ -22,7 +38,8 @@ main{
 .form-loguin{
     background-color: #e5e5e5;
     width: 500px;
-    height: 400px;
+    min-width: 380px;
+    height: 420px;
     padding: 20px 25px;
     display: flex;
     flex-direction: column;
@@ -30,6 +47,7 @@ main{
     justify-content: center;
     border-radius: 10px;
     gap: 20px;
+    
 }
 .form-loguin h2{
     font-size: 30px;
@@ -48,16 +66,45 @@ main{
     border-radius: 10px;
     color: white;
 }
+
+.redes{
+    margin-top: 20px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes{
+    font-size: 20px;
+    font-weight: 200px;
+}
+.redes img{
+    max-width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    
+}
 @media (max-width: 992px){
     /*Tablet*/
     .form-loguin{
         width: 450px;
     }
-
+    .redes li{
+        font-size: 16px;
+        
+    }
 }
 @media (max-width: 576px) {
     /*Mobile*/
     .form-loguin{
         width: 350px;
+        height: 450px;
+    }
+    .redes{
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

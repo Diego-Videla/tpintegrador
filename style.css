@@ -28,6 +28,9 @@ header {
     align-items:center;
     justify-content:center;
 }
+.navbar-list li:hover{
+    transform: scale(1,2.5);
+}
 .navbar {
     gap: 150px;
 }
@@ -177,6 +180,8 @@ main {
     width: 200px;
     height: 250px;
 }
+
+
 .producto-titulo{
     font-size: 30px;
     color: blue;
@@ -193,6 +198,14 @@ main {
     align-items: center;
     border-radius: 10px;
     cursor: pointer;
+    background-image: linear-gradient(to right, blue 50%, black 50% );
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition:background-position .5s ease;
+}
+.boton:hover{
+    background-position: right;
 }
 #contacto{
     max-width:1200px;
@@ -295,6 +308,9 @@ footer{
         display: flex;
         order: 2;
         cursor: pointer;
+    }
+    .menu-label:active{
+        transform: rotate(45deg);
     }
 
     .menu-label img {
