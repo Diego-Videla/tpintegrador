@@ -15,19 +15,28 @@
     <main>
         <div class="form-loguin">
             <h2>Iniciar de sesión</h2>
-            <label for="usuario">Usuario:</label>
-            <input type="email" id="usuario" name="usuario">
-            <label for="contraseña">Contraseña:</label>
-            <input type="password" id="contraseña" name="contraseña">
+            <div class="contenedor-loguin">
+                <div >
+                    <label for="usuario">Usuario:</label>
+                    <input type="email" id="usuario" name="usuario">
+                    <p id="errorusuario"></p>
+                </div>
+                <div>
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña">
+                    <p id="errorcontraseña"></p>
+                </div>
+            </div>
             <div class="boton">
-                <a href="./index.html">Ingresar</a>
+                <a id="btningresar" >Ingresar</a>
                 <a href="./registro.html">Registrar</a>
             </div>
                 <ul class="redes">
-                    <li> <img src="./imagenes/logo-face.avif" alt="Logo facebook"> Clinica_veterinaria </li>
-                    <li> <img src="./imagenes/logo-ing.avif" alt="Logo instagram"> Clinica_Veterinaria </li>
+                    <li> <img src="./imagenes/logo-face.png" alt="Logo facebook"> Clinica_veterinaria </li>
+                    <li> <img src="./imagenes/logo-ing.png" alt="Logo instagram"> Clinica_Veterinaria </li>
                 </ul>
         </div>
     </main>
+    <script src="./js/login.js" ></script>
 </body>
 </html>

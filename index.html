@@ -10,6 +10,7 @@
 <body>
     <header>
         <img src="./imagenes/img-logo.png" alt="imagen logo" class="logo">
+        <p class="usuario-loguin"></p>
         <nav class="navbar">
             <label for="menu-toggle" class="menu-label">
             <img src="./imagenes/img-menu.png" alt="" class="menu-icon" />
@@ -21,9 +22,27 @@
                 <li><a href="#servicios">Servicios </a></li>
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#contacto">Contactanos</a></li>
-                <li><a href="./login.html">Salir</a></li>
+                <li id="btnsalir">Salir</li>
+                
               </ul>
-
+              <label for="cart-toggle" class="cart-label">
+                <img src="./imagenes/cart-icon.png" alt="Carrito de compras" class="cart-icon" />
+              </label>
+              <input type="checkbox" id="cart-toggle" />
+            <div class="carritocompras">
+                <div class="contenedor-compras">
+                   
+                </div>
+                <div class="carritototal">
+                        <p class="etiquetatotal">TOTAL</p>
+                        
+                        <p class="totalprecio"></p>
+                </div>
+                <div class="carritobtn">
+                    <button class="btnborrar">Borrar todo</button>
+                    <button class="btncomprar">Comprar</button>
+                </div>
+            </div> 
         </nav>
 
     </header>
@@ -57,81 +76,16 @@
         </section>
         <section id="productos">
             <h2>Nuestros productos</h2>
-            <div class="productos-contenedor">
-                <div class="producto-info">
-                    <img src="./imagenes/img-alimento1.png" alt="imagen alimento1">
-                    <p class="producto-titulo">Agility adulto x 20kg</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-alimento2.png" alt="imagen alimento2">
-                    <p class="producto-titulo">Agility derma  3kg</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-alimento3.png" alt="imagen alimento3">
-                    <p class="producto-titulo">Biopet 20kg</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-alimento4.png" alt="imagen alimento4">
-                    <p class="producto-titulo">Excellent Cat Adulto</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-alimento5.png" alt="imagen alimento5">
-                    <p class="producto-titulo">Excellent Cat Kitten</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-alimento6.png" alt="imagen alimento6">
-                    <p class="producto-titulo">Excellent sterilized</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-collar1.png" alt="imagen collar">
-                    <p class="producto-titulo">collar</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-collar2.png" alt="imagen collar">
-                    <p class="producto-titulo">collar y correa</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-comedero.png" alt="imagen comedero">
-                    <p class="producto-titulo">Comedero plegable</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-pelota.png" alt="imagen pelota">
-                    <p class="producto-titulo">Pelota con silbato</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-pelota1.png" alt="hueso de goma">
-                    <p class="producto-titulo">Hueso de goma</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-                <div class="producto-info">
-                    <img src="./imagenes/img-pelota2.png" alt="pelota maciza">
-                    <p class="producto-titulo">Pelota maciza</p>
-                    <p class="producto-precio"> $5</p>
-                    <p class="boton">Comprar</p>
-                </div>
-          
+            <div class="categorias-contenedor">
+                <button class="categoria activa" data-category="todos">Todas</button>
+                <button class="categoria" data-category="alimentos">Alimentos</button>
+                <button class="categoria" data-category="accesorios">Accesorios</button>
+                <button class="categoria" data-category="juguetes">Juguetes</button>
             </div>
+            <div class="productos-contenedor">
+            
+            </div>
+            
         </section>
         <section id="contacto">
             <h2>Contáctanos</h2>
@@ -140,8 +94,8 @@
                     <li>🏠 Alberti 1559</li>
                     <li>📱  2235984520</li>
                     <li>⌚ Lunes a Viernes 8 a 16hs</li>
-                    <li> <img src="./imagenes/logo-face.avif" alt="Logo facebook"> Clinica_veterinaria </li>
-                    <li> <img src="./imagenes/logo-ing.avif" alt="Logo instagram"> Clinica_Veterinaria </li>
+                    <li> <img src="./imagenes/logo-face.png" alt="Logo facebook"> Clinica_veterinaria </li>
+                    <li> <img src="./imagenes/logo-ing.png" alt="Logo instagram"> Clinica_Veterinaria </li>
                 </ul>
                 <div class="contacto-imagen">
                     <a href="https://www.google.com/maps/place/Alberti+1559,+B7600FIE+Mar+del+Plata,+Provincia+de+Buenos+Aires/@-38.0118476,-57.544848,17z/data=!3m1!4b1!4m5!3m4!1s0x9584dc23538d1791:0xa1a1d803103015c2!8m2!3d-38.0118519!4d-57.5422731?hl=es&entry=ttu"> <img src="./imagenes/img-ubicacion.png" alt="imagen ubicacion"> </a>
@@ -159,5 +113,6 @@
             </ul>
           </div>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

@@ -9,21 +9,36 @@
 </head>
 <body>
     <main>
-        <div class="form-registro">
-            <h2>Crear cuenta</h2>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre">
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido">
-            <label for="usuario">Usuario:</label>
-            <input type="email" id="usuario" name="usuario">
-            <label for="contraseña">Contraseña:</label>
-            <input type="password" id="contraseña" name="contraseña">
-            <div class="boton">
-                <a href="./index.html">Guardar</a>
-                <a href="./login.html">Salir</a>
+        <form class="formulario">
+            <div class="form-registro">
+                <h2>Crear cuenta</h2>
+                <div class="contenedor">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <p class="error" id="errornombre"> </p>
+                </div>
+                <div class="contenedor">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido">
+                    <p class="error" id="errorapellido"> </p>
+                </div>
+                <div class="contenedor"> 
+                    <label for="usuario">Usuario:</label>
+                    <input type="text" id="usuario" name="usuario">
+                    <p class="error" id="errorusuario"> </p>
+                </div>
+                <div class="contenedor">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña">
+                    <p class="error" id="errorcontraseña"> </p>
+                </div >
+                <div class="boton">
+                    <button class="btnguardar">Guardar</button>
+                    <a href="./login.html">Salir</a>
+                </div>
             </div>
-        </div>
+        </form>
     </main>
+    <script src="./js/registro.js"></script>
 </body>
 </html>

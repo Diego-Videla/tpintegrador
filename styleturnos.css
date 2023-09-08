@@ -16,13 +16,15 @@ main{
     justify-content: center;
     color: black;
     width: 100%;
-    height: 700px;
+    height: 1000px;
     
 }
+
 .form-turnos{
+    
     background-color: #e5e5e5;
-    width: 500px;
-    height: 600px;
+    width: 520px;
+    height: 940;
     padding: 20px 25px;
     display: flex;
     flex-direction: column;
@@ -33,6 +35,27 @@ main{
 }
 .form-turnos h2{
     font-size: 40px;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.contenedor label{
+    font-size: 18px;
+}
+.contenedor input{
+    height: 25px;
+    width: 190px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.contenedor p{
+    color: red;
+    font-size: 18px;
 }
 .boton{
     display: flex;
@@ -47,6 +70,7 @@ main{
     background-color: blue;
     border-radius: 10px;
     color: white;
+    cursor: pointer;
 }
 
 @media (max-width: 992px){

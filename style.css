@@ -6,7 +6,9 @@
     text-decoration: none;
     list-style-type: none;
 }
-
+body{
+    min-width: 320px;
+}
 header {
     background-color: #e5e5e5;
     width: 100%;
@@ -21,6 +23,11 @@ header {
 }
 .logo {
     height: 85px;
+}
+.usuario-loguin{
+    font-size: 20px;
+    font-weight: 600;
+    color:darkorchid;
 }
 .navbar,
 .navbar-list {
@@ -37,18 +44,128 @@ header {
 .navbar-list {
     gap: 30px;
 }
-.navbar-list a {
+.navbar-list a,
+#btnsalir {
     color:darkorchid ;
     font-size: 14px;
+    cursor: pointer;
 }
 .navbar-list li:first-child>a {
     color: black;
     font-weight: 600;
 }
-
+.cart-icon {
+    border-radius: 10px;
+    height: 40px;
+    padding: 5px 10px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
 #menu-toggle,
+#cart-toggle,
 .menu-label {
     display: none;
+}
+.open-cart{
+    position: absolute;
+    min-width: 480px;
+    top: 65px;
+    right: 0%;
+    width: 35%;
+    flex-direction: column;
+    background-color:#3a86ff;
+    border: 2px solid blue;
+    border-top: 0;
+    border-radius: 0 0 15px 15px;
+    align-items:center;
+    padding: 45px 30px;
+    gap: 25px;
+    z-index: 2;
+
+}
+.contenedor-compras{
+    min-width: 400px;
+}
+
+.contenedor-compras-productos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid blue;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.cantidad-producto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.img-produc img{
+    height: 80px;
+    width: 70px;
+}
+
+.descripcion-producto{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.cantidad-producto button{
+    height: 25px;
+    width: 25px;
+    border: 2px solid black;
+    background-color:  #e5e5e5;
+    color:darkorchid ;
+    font-weight: 900;
+    cursor: pointer;
+    padding: 1px;
+}
+.carritocompras{
+    display: none;
+}
+.carritobtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 15px;
+}
+.carritobtn button{
+    min-width: 400px;
+    height: 25px;
+    border-radius: 10px;
+    background-color:  #e5e5e5;
+    color:darkorchid ;
+    font-weight: 700;
+    cursor: pointer;
+}
+.descripcion-producto-nombre{
+    color: black ;
+    font-weight: 600;
+}
+.descripcion-producto-precio{
+    color:darkorchid ;
+    font-weight: 700;
+    font-size: 22px;
+}
+.carritototal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.carritototal p{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 700;
 }
 main {
     background: linear-gradient(90deg, rgba(12,10,166,1) 0%, rgba(79,112,201,1) 35%, rgba(0,212,255,1) 100%);
@@ -156,6 +273,27 @@ main {
 #productos h2{
     color: white;
     font-size: 50px;
+}
+.categorias-contenedor{
+    height: 60px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+.categorias-contenedor button{
+    height: 35px;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.activa{
+    background-color:cadetblue;
 }
 .productos-contenedor{
     display: flex;
@@ -281,6 +419,9 @@ footer{
     .navbar{
         gap: 10px;
     }
+    .usuario-loguin{
+        font-size: 26px;
+    }
     .navbar-list{
         position: absolute;
         top: 65px;
@@ -299,7 +440,8 @@ footer{
         display: none;
 
     }
-    .navbar-list a{
+    .navbar-list a,
+    #btnsalir{
         font-size: 20px;
         color: white;
         font-weight: 900;
@@ -317,7 +459,10 @@ footer{
         height: 45px;
         width: 40px;
     }
-    #menu-toggle:checked+.navbar-list {
+    .cerrarmenu{
+        display: none;
+    }
+   #menu-toggle:checked+.navbar-list {
         display: flex;
     }
     .hero-info {
@@ -417,6 +562,18 @@ footer{
         align-items: center;
         justify-content: center;
         gap: 25px;
+    }
+   .open-cart{
+        position: absolute;
+        min-width: 380px;
+        padding: 45px, 0;
+    
+    }
+    .carritobtn button{
+        min-width: 360px;
+    }
+    .contenedor-compras{
+        min-width: 325px;
     }
 
 }
